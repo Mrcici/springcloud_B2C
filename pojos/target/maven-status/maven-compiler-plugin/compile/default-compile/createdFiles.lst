@@ -1,0 +1,5 @@
+com\cici\entity\wallet\Wallet.class
+com\cici\entity\info.class
+com\cici\entity\account\Account.class
+com\cici\entity\order\Order.class
+com\cici\entity\product\Product.class

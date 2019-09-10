@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="account" />
+        <module name="admin" />
+        <module name="app" />
+        <module name="config" />
+        <module name="eureka" />
+        <module name="excepitoncode" />
+        <module name="feign" />
+        <module name="gateway" />
+        <module name="oauth" />
+        <module name="order" />
+        <module name="pojos" />
+        <module name="product" />
+        <module name="wallet" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
