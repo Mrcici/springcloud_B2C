@@ -9,11 +9,13 @@
         <module name="account" />
         <module name="admin" />
         <module name="app" />
+        <module name="baseutil" />
         <module name="config" />
         <module name="eureka" />
         <module name="excepitoncode" />
         <module name="feign" />
         <module name="gateway" />
+        <module name="mybatis" />
         <module name="oauth" />
         <module name="order" />
         <module name="pojos" />
