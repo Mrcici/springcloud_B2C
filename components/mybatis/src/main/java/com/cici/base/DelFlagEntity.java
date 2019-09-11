@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper=false)
 public class DelFlagEntity<T> extends BaseEntity<T> {
     /**
-     * 逻辑删除配置 [1：正常；2：删除]
+     * 逻辑删除配置 [0：正常；1：删除]
      */
     @TableLogic
     @TableField(value = "del_flag", fill = FieldFill.INSERT)

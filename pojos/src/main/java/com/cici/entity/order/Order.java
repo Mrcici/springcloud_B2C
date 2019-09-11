@@ -24,7 +24,7 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName(value = "order")
+@TableName(value = "order_new")
 public class Order extends DelFlagEntity {
 
     @TableId(type = IdType.ID_WORKER)

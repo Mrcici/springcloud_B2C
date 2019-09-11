@@ -3,26 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>server</artifactId>
+        <artifactId>service</artifactId>
         <groupId>com.cici.txdemo</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>order</artifactId>
-    <dependencies>
 
-        <dependency>
-            <groupId>com.cici.txdemo</groupId>
-            <artifactId>pojos</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+    <dependencies>
 
         <dependency>
             <groupId>com.cici.txdemo</groupId>
             <artifactId>excepitoncode</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
 

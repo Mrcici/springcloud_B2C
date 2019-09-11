@@ -1,8 +1,10 @@
 package com.cici.entity.order.requestbody;
 
 import com.cici.base.BaseBody;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
@@ -12,6 +14,8 @@ import java.math.BigDecimal;
  */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderCreateRequestBody extends BaseBody {
 
     private Long id;
