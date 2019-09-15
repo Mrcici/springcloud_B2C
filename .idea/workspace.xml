@@ -2,22 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d182d9d4-3056-41f2-ab71-d664e6375dd0" name="Default Changelist" comment="[CODE] 集成mybatis-plus">
-      <change afterPath="$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/MyMetaObjectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/order/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/DelFlagEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/DelFlagEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojos/src/main/java/com/cici/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojos/src/main/java/com/cici/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojos/src/main/java/com/cici/entity/order/requestbody/OrderCreateRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojos/src/main/java/com/cici/entity/order/requestbody/OrderCreateRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/account/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/account/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud/cloud.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud/config/config.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud/eureka/eureka.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud/eureka/target/classes/META-INF/eureka.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud/gateway/gateway.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud/oauth/oauth.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/excepitoncode/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/components/excepitoncode/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feign/feign.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/admin/admin.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/app/app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/front.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojos/pojos.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/order/src/main/java/com/cici/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/order/src/main/java/com/cici/OrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/order/src/main/java/com/cici/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/order/src/main/java/com/cici/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/order/src/main/java/com/cici/mapper/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/order/src/main/java/com/cici/mapper/TestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/order/src/main/java/com/cici/service/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/order/src/main/java/com/cici/service/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/order/src/main/java/com/cici/service/impl/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/order/src/main/java/com/cici/service/impl/TestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/wallet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/wallet/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,67 +55,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/DelFlagEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/BaseEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-annotation/3.2.0/mybatis-plus-annotation-3.2.0.jar!/com/baomidou/mybatisplus/annotation/FieldFill.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/MyMetaObjectHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/controller/TestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#591#592#0" expanded="true" />
-                <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#801#802#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pojos/src/main/java/com/cici/entity/order/requestbody/OrderCreateRequestBody.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
@@ -132,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/service/impl/TestServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="616">
               <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -144,7 +81,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/OrderApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="154">
               <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -156,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/mapper/TestMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="176">
               <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -165,14 +102,59 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pojos/src/main/java/com/cici/entity/order/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="288">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/product/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="39" selection-end-line="14" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/service/order/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/excepitoncode/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-844">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -203,7 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/conponents/excepitoncode/src/main/java/com/cici/exception/common/RestMethodNotAllowedException.java" />
         <option value="$PROJECT_DIR$/conponents/excepitoncode/src/main/java/com/cici/exception/common/RestInternalServerErrorException.java" />
         <option value="$PROJECT_DIR$/conponents/excepitoncode/src/main/java/com/cici/exception/common/RestForbiddenException.java" />
         <option value="$PROJECT_DIR$/conponents/excepitoncode/src/main/java/com/cici/exception/common/RestBadRequestException.java" />
@@ -241,7 +222,6 @@
         <option value="$PROJECT_DIR$/service/wallet/pom.xml" />
         <option value="$PROJECT_DIR$/service/product/pom.xml" />
         <option value="$PROJECT_DIR$/service/account/pom.xml" />
-        <option value="$PROJECT_DIR$/service/order/pom.xml" />
         <option value="$PROJECT_DIR$/service/order/src/main/java/com/cici/mapper/TestMapper.java" />
         <option value="$PROJECT_DIR$/service/order/src/main/java/com/cici/controller/TestController.java" />
         <option value="$PROJECT_DIR$/service/order/src/main/java/com/cici/service/TestService.java" />
@@ -254,6 +234,8 @@
         <option value="$PROJECT_DIR$/service/order/src/main/resources/mapper/OrderMapper.xml" />
         <option value="$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/MyMetaObjectHandler.java" />
         <option value="$PROJECT_DIR$/pojos/src/main/java/com/cici/entity/order/Order.java" />
+        <option value="$PROJECT_DIR$/components/excepitoncode/pom.xml" />
+        <option value="$PROJECT_DIR$/service/order/pom.xml" />
       </list>
     </option>
   </component>
@@ -275,230 +257,64 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="cloud" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="excepitoncode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="excepitoncode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="excepitoncode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cici" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pojos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pojos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pojos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pojos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pojos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pojos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pojos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-              <item name="requestbody" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="order" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cici" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cici" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cici" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="springcloud_B2C" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_B2C" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tx_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="wallet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-annotation:3.2.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-annotation:3.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-annotation-3.2.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tx_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.baomidou:mybatis-plus-annotation:3.2.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="mybatis-plus-annotation-3.2.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,6 +330,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568196757458" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -670,6 +487,7 @@
       <workItem from="1568103631386" duration="17053000" />
       <workItem from="1568189461710" duration="1028000" />
       <workItem from="1568190929634" duration="5924000" />
+      <workItem from="1568516418196" duration="909000" />
     </task>
     <task id="LOCAL-00001" summary="[CODE] 集成mybatis-plus">
       <created>1568189968398</created>
@@ -689,7 +507,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53163000" />
+    <option name="totallyTimeSpent" value="54072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -701,10 +519,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19364598" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -727,7 +545,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3290461" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.38197425" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.42131147" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -748,13 +566,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="[CODE] 集成mybatis-plus" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/front/admin/src/main/java/com/cici/AdminApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feign/src/main/java/com/cici/api/v1/feign/account/OrderServerFeign.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -820,13 +631,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class" />
     <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/PageBody.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -878,13 +683,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -971,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/product/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/account/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -992,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/order/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/BaseBody.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1009,20 +793,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.2.0/mybatis-plus-core-3.2.0.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.2.0/mybatis-plus-core-3.2.0.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class" />
     <entry file="file://$PROJECT_DIR$/service/order/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -1030,13 +801,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar!/org/apache/coyote/AbstractProcessorLight.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar!/org/apache/coyote/AbstractProcessorLight.class" />
     <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/service/TestService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1054,9 +819,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-annotation/3.2.0/mybatis-plus-annotation-3.2.0.jar!/com/baomidou/mybatisplus/annotation/FieldFill.class" />
+    <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/DelFlagEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/MyMetaObjectHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="462">
           <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1078,46 +874,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/MyMetaObjectHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-annotation/3.2.0/mybatis-plus-annotation-3.2.0.jar!/com/baomidou/mybatisplus/annotation/FieldFill.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/DelFlagEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/mybatis/src/main/java/com/cici/base/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/service/impl/TestServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="616">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1127,7 +886,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/OrderApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="154">
           <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1137,7 +896,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/order/src/main/java/com/cici/mapper/TestMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="176">
           <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1147,11 +906,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pojos/src/main/java/com/cici/entity/order/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state relative-caret-position="288">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/product/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="39" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-844">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/excepitoncode/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/order/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
