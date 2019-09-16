@@ -8,7 +8,8 @@
 .springBeans
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
+workspace.xml
 *.iws
 *.iml
 *.ipr
@@ -32,4 +33,3 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 target
-workspace.xml
