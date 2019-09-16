@@ -1,0 +1,30 @@
+server:
+  port: 10010
+
+spring:
+  application:
+    name: oauth-service
+  profiles:
+    active: master
+#  cloud:
+#    config:
+#      fail-fast: true
+#      name: ${spring.application.name}
+#      profile: ${spring.profiles.active}
+#      discovery:
+#        service-id: config-service
+#        enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    # password: 123456
+    # Number of ms to wait before throwing an exception if no connection is available.
+    max-wait: 10000
+    # Maximum number of active connections that can be allocated from this pool at the same time.
+    max-active: 20
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10111/eureka
