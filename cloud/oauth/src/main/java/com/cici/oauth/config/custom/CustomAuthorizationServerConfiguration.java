@@ -17,6 +17,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.approval.ApprovalStore;
 import org.springframework.security.oauth2.provider.approval.JdbcApprovalStore;
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
@@ -172,7 +173,11 @@ public class CustomAuthorizationServerConfiguration extends AuthorizationServerC
         accessTokenConverter.setSigningKey(jwtKey);
         return accessTokenConverter;
     }
-
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+        oauthServer.tokenKeyAccess("isAnonymous() || hasAuthority('ROLE_USER')");
+        oauthServer.checkTokenAccess("isAuthenticated()");
+    }
     /**
      * token store
      * 配置token的验证方式
