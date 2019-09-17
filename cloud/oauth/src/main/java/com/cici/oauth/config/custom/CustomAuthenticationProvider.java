@@ -174,21 +174,20 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             if (!user.isAccountNonLocked()) {
                 log.debug("User account is locked");
 
-                throw new RestPreconditionFailedException(ExceptionEnumImpl.ACCOUNT_NON_LOCKED,
-                        "用户帐号已被锁定");
+//                throw new RestPreconditionFailedException(ExceptionEnumImpl.ACCOUNT_NON_LOCKED,
+//                        "用户帐号已被锁定");
             }
 
             if (!user.isEnabled()) {
                 log.debug("User account is disabled");
-                throw new RestPreconditionFailedException(ExceptionEnumImpl.ACCOUNT_NOT_ENABLED,
-                        "账号已停用");
+//                throw new RestPreconditionFailedException(ExceptionEnumImpl.ACCOUNT_NOT_ENABLED,
+//                        "账号已停用");
             }
 
             if (!user.isAccountNonExpired()) {
                 log.debug("User account is expired");
-
-                throw new RestPreconditionFailedException(ExceptionEnumImpl.ACCOUNT_EXPIRED,
-                        "账号已过期");
+//                throw new RestPreconditionFailedException(ExceptionEnumImpl.ACCOUNT_EXPIRED,
+//                        "账号已过期");
             }
         }
     }

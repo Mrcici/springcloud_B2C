@@ -28,3 +28,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10111/eureka
+
+custom:
+  security:
+    jwtKey: 123

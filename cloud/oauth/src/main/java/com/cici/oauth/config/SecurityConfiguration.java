@@ -1,16 +1,8 @@
 package com.cici.oauth.config;
 
-
-import com.zwx.config.security.custom.CustomAuthenticationProvider;
-import com.zwx.config.security.wechat.WeChatAuthenticationSuccessHandler;
-import com.zwx.config.security.wechat.WeChatAuthorizationFilter;
-import com.zwx.config.security.wechat.WeChatAuthorizationProvider;
-import com.zwx.config.security.wechat.impl.WeChatMakerServiceImpl;
-import com.zwx.config.security.wechat.impl.WeChatStoreServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.cici.oauth.config.custom.CustomAuthenticationProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -40,12 +32,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new CustomAuthenticationProvider();
     }
 
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) {
         auth.authenticationProvider(customAuthenticationProvider());
     }
-
 
     /**
      * @param http
@@ -53,11 +43,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        OAuth2ClientAuthenticationProcessingFilter filter = new OAuth2ClientAuthenticationProcessingFilter(OAUTH_TOKEN_URL);
-//        filter.setAuthenticationManager(authentication -> provider().authenticate(authentication));
-
         http.authorizeRequests()
-
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .antMatchers("/oauth/**").permitAll()
                 .antMatchers("/oauth/token/**").permitAll()
@@ -74,9 +60,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .exceptionHandling()
                 .authenticationEntryPoint(new CustomOAuth2AuthenticationEntryPoint());
         //因为没用到cookies,所以关闭cookies
-//                .httpBasic() .and()
 //        // 除上面外的所有请求全部需要鉴权认证
-
         http.csrf().disable();
         http.headers().cacheControl();
 
@@ -87,6 +71,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
 
 }

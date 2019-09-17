@@ -8,6 +8,10 @@ import com.cici.exception.ExceptionEnum;
  */
 public enum  ExceptionEnumImpl  implements ExceptionEnum {
 
+    //认证方面的
+    INVALID_TOKEN(1000,"登录失败"),
+    ACCOUNT_NOT_FOUND(1001,"手机未注册"),
+    ACCOUNT_PASSWORD_ERROR(1002,"密码错误"),
     CREATE_ERROR(100000, "创建错误");
 
     private int code;
