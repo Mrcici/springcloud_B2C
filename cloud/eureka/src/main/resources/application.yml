@@ -5,7 +5,7 @@ spring:
     active: master
 
 server:
-  port: 10112
+  port: 10111
 eureka:
   instance:
     hostname: localhost
