@@ -45,10 +45,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-//    private UserDetailsChecker preAuthenticationChecks = new CustomAuthenticationProvider.DefaultPreAuthenticationChecks();
-//    private static final int ABBREVIATION_LENGTH = 6;
-
-
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
