@@ -12,11 +12,7 @@
     <artifactId>order</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.cici.txdemo</groupId>
-            <artifactId>excepitoncode</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+
     </dependencies>
 
 

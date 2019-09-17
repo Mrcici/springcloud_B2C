@@ -13,6 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
+import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
@@ -59,6 +60,24 @@ public class CustomAuthorizationServerConfiguration extends AuthorizationServerC
 
     public CustomAuthorizationServerConfiguration(@Value("${custom.security.jwtKey}")String jwtKey) {
         this.jwtKey = jwtKey;
+    }
+
+    @Override
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+
+        // 定义了两个客户端应用的通行证
+        clients.inMemory()
+                .withClient("sheep1")
+                .secret(new BCryptPasswordEncoder().encode("123456"))
+                .authorizedGrantTypes("authorization_code", "refresh_token")
+                .scopes("all")
+                .autoApprove(false)
+                .and()
+                .withClient("sheep2")
+                .secret(new BCryptPasswordEncoder().encode("123456"))
+                .authorizedGrantTypes("authorization_code", "refresh_token")
+                .scopes("all")
+                .autoApprove(false);
     }
 
     @Override
