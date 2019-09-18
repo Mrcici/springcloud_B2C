@@ -2,6 +2,8 @@ package com.cici.oauth.config.custom;
 
 import com.cici.oauth.config.CustomWebResponseExceptionTranslator;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,8 +20,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.approval.ApprovalStore;
 import org.springframework.security.oauth2.provider.approval.JdbcApprovalStore;
+import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
@@ -34,11 +38,14 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 认证授权服务端
+ */
 @Configuration
 @EnableAuthorizationServer
 public class CustomAuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
-    private final String jwtKey ;
+    private final String jwtKey;
     @Autowired
     private DataSource dataSource;
     @Autowired
@@ -59,20 +66,8 @@ public class CustomAuthorizationServerConfiguration extends AuthorizationServerC
         return new BCryptPasswordEncoder();
     }
 
-    public CustomAuthorizationServerConfiguration(@Value("${custom.security.jwtKey}")String jwtKey) {
+    public CustomAuthorizationServerConfiguration(@Value("${custom.security.jwtKey}") String jwtKey) {
         this.jwtKey = jwtKey;
-    }
-
-    @Override
-    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-
-        clients.inMemory()
-                .withClient("test")
-                .secret("123456")
-                .authorizedGrantTypes("password", "refresh_token")
-                .authorities("ROLE_USER")
-                .scopes("all")
-                ;
     }
 
     @Override
@@ -90,19 +85,44 @@ public class CustomAuthorizationServerConfiguration extends AuthorizationServerC
                 .tokenEnhancer(tokenEnhancerChain)
                 .exceptionTranslator(new CustomWebResponseExceptionTranslator());
     }
-    @Bean
-    public ApprovalStore approvalStore() {
-        return new JdbcApprovalStore(oauthDataSource());
+
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+        oauthServer.tokenKeyAccess("isAnonymous() || hasAuthority('ROLE_USER')");
+        oauthServer.checkTokenAccess("isAuthenticated()");
     }
+
 
     public DataSource oauthDataSource() {
         return dataSource;
     }
 
     @Bean
+    public ApprovalStore approvalStore() {
+        return new JdbcApprovalStore(oauthDataSource());
+    }
+
+    @Bean
     public AuthorizationCodeServices authorizationCodeServices() {
         return new JdbcAuthorizationCodeServices(oauthDataSource());
     }
+
+    @Bean
+    public ClientDetailsService clientDetails() {
+        return new JdbcClientDetailsService(oauthDataSource());
+    }
+
+    /**
+     * 配置ClientDetails（ClientId,GrantTypes,authorities,scopes,resourceIds,TokenValidity）
+     *
+     * @param clients
+     * @throws Exception
+     */
+    @Override
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        clients.withClientDetails(clientDetails());
+    }
+
     /**
      * jwt 生成token 定制化处理
      *
@@ -167,18 +187,16 @@ public class CustomAuthorizationServerConfiguration extends AuthorizationServerC
         accessTokenConverter.setSigningKey(jwtKey);
         return accessTokenConverter;
     }
-    @Override
-    public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-        oauthServer.tokenKeyAccess("isAnonymous() || hasAuthority('ROLE_USER')");
-        oauthServer.checkTokenAccess("isAuthenticated()");
-    }
+
     /**
      * token store
      * 配置token的验证方式
      */
     @Bean
     public TokenStore tokenStore() {
+
         return new JwtTokenStore(accessTokenConverter());
     }
+
 
 }
