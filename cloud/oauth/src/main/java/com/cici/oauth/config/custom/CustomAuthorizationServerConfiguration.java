@@ -69,7 +69,7 @@ public class CustomAuthorizationServerConfiguration extends AuthorizationServerC
         clients.inMemory()
                 .withClient("test")
                 .secret("123456")
-                .authorizedGrantTypes("authorization_code", "refresh_token")
+                .authorizedGrantTypes("password", "refresh_token")
                 .authorities("ROLE_USER")
                 .scopes("all")
                 ;
