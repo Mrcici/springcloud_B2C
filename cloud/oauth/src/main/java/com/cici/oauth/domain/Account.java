@@ -10,6 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -46,7 +47,11 @@ public class Account implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<String> authorities = this.getRoles().stream().map(Role::getAuthority).collect(Collectors.toList());
+        List<Role> list = new ArrayList<>();
+        Role role = new Role();
+        role.setAuthority("ROLE_USER");
+        list.add(role);
+        List<String> authorities = list.stream().map(Role::getAuthority).collect(Collectors.toList());
         return mapToGrantedAuthorities(authorities);
     }
 

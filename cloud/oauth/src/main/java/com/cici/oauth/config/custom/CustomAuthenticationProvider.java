@@ -2,6 +2,7 @@ package com.cici.oauth.config.custom;
 
 import com.cici.exception.common.ExceptionEnumImpl;
 import com.cici.exception.common.RestPreconditionFailedException;
+import com.cici.tools.StringEncryptUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -42,8 +43,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     private ClientDetailsService clientDetailsService;
     @Autowired
     private HttpServletRequest request;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -57,7 +56,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
                 : authentication.getName();
 
         String password = (String) authentication.getCredentials();
-
+        password = StringEncryptUtil.Encrypt(password,"MD5");
         UserDetails userDetails;
 
         try {
@@ -78,14 +77,12 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         clientChecks(userDetails, clientDetails);
 
         //优先匹配密码
-        if (passwordEncoder.matches(password, userDetails.getPassword())) {
-
+        if (password.equals(userDetails.getPassword())) {
             return new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());
         } else {
             throw new RestPreconditionFailedException(ExceptionEnumImpl.ACCOUNT_PASSWORD_ERROR,
                     "用户密码错误");
         }
-
     }
 
     private String getClientId(Principal principal) {
