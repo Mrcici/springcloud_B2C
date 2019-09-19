@@ -1,7 +1,8 @@
 package com.cici.oauth.config;
 
+
 import com.cici.oauth.config.custom.CustomAuthenticationProvider;
-import com.cici.oauth.domain.Account;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -11,12 +12,8 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @EnableWebSecurity: 禁用Boot的默认Security配置，配合@Configuration启用自定义配置（需要扩展WebSecurityConfigurerAdapter）
@@ -29,6 +26,7 @@ import java.util.List;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity(debug = true)
 @EnableOAuth2Client
+@Slf4j
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Bean
@@ -47,9 +45,23 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        log.info("加载");
         http.authorizeRequests()
+                .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .antMatchers("/oauth/**").permitAll()
-                .antMatchers("/oauth/token/**").permitAll();
+                .antMatchers("/oauth/token/**").permitAll()
+                // 对于获取token的rest api要允许匿名访问
+               .anyRequest().authenticated()
+                .and()
+                .exceptionHandling().and()
+                //不需要session来控制,所以这里可以去掉
+                // 基于token，所以不需要session
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+                //退出登录自己来控制
+//                .addFilterBefore(new CorsFilter(), ChannelProcessingFilter.class)
+                .logout().disable()
+                .exceptionHandling()
+                .authenticationEntryPoint(new CustomOAuth2AuthenticationEntryPoint());
         http.csrf().disable();
         http.headers().cacheControl();
 

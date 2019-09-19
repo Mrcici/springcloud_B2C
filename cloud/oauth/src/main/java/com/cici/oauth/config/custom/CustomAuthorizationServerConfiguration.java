@@ -121,6 +121,12 @@ public class CustomAuthorizationServerConfiguration extends AuthorizationServerC
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.withClientDetails(clientDetails());
+//        clients.inMemory()
+//                .withClient("test")
+//                .secret("123456")
+//                .authorizedGrantTypes("password","refresh_token")
+//                .authorities("ROLE_USER")
+//                .scopes("all");
     }
 
     /**
