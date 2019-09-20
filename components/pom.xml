@@ -16,6 +16,7 @@
         <module>excepitoncode</module>
         <module>mybatis</module>
         <module>baseutil</module>
+        <module>boot-security</module>
     </modules>
 
 
