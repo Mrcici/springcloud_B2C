@@ -34,4 +34,4 @@ eureka:
 custom:
   security:
     jwtKey: 123
-    resourceId: admin-service
+    resourceId: app-service

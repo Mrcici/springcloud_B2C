@@ -12,6 +12,8 @@ public enum  ExceptionEnumImpl  implements ExceptionEnum {
     INVALID_TOKEN(1000,"登录失败"),
     ACCOUNT_NOT_FOUND(1001,"手机未注册"),
     ACCOUNT_PASSWORD_ERROR(1002,"密码错误"),
+    ACCOUNT_NON_LOCKED(1003,"账号被锁"),
+    ROLE_ACCESS_FORBIDDEN(1004,"拒绝"),
     CREATE_ERROR(100000, "创建错误");
 
     private int code;
