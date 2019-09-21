@@ -18,6 +18,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.access.channel.ChannelProcessingFilter;
 
 
 @Configuration
@@ -57,15 +58,14 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         httpSecurityConfig.configure(http)
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .antMatchers("/hystrix.stream/**", "/info", "/error").permitAll()
-                .antMatchers("/v2/api-docs/**").permitAll()
-                .anyRequest().authenticated()
+               .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().and()
                 //不需要session来控制,所以这里可以去掉
                 // 基于token，所以不需要session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 //退出登录自己来控制
-//                .addFilterBefore(new CorsFilter(), ChannelProcessingFilter.class)
+                .addFilterBefore(new CorsFilter(), ChannelProcessingFilter.class)
                 .logout().disable()
                 //因为没用到cookies,所以关闭cookies
                 .httpBasic().and().csrf().disable();
