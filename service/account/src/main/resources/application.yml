@@ -3,13 +3,7 @@ server:
 # 日志支持
 logging:
   level:
-    org:
-      springframework:
-        security: DEBUG
-    com:
-      lawt:
-        repository:
-          mapper: DEBUG
+    org.springframework: DEBUG
 spring:
   application:
     name: account-service
@@ -30,3 +24,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10111/eureka
+
+# 配置slq打印日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

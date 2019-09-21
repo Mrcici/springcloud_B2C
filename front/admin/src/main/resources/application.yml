@@ -40,7 +40,4 @@ custom:
 
 logging:
   level:
-    org:
-      springframework:
-        security: INFO
-
+    org.springframework: DEBUG
