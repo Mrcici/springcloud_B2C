@@ -1,19 +1,21 @@
 server:
   port: 10001
-
+# 日志支持
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+    com:
+      lawt:
+        repository:
+          mapper: DEBUG
 spring:
   application:
     name: account-service
   profiles:
     active: master
-#  cloud:
-#    config:
-#      fail-fast: true
-#      name: ${spring.application.name}
-#      profile: ${spring.profiles.active}
-#      discovery:
-#        service-id: config-service
-#        enabled: true
+
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8

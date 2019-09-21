@@ -11,5 +11,43 @@
 
     <artifactId>security-helper</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.cici.txdemo</groupId>
+            <artifactId>boot-security</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cici.txdemo</groupId>
+            <artifactId>oauth</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cici.txdemo</groupId>
+            <artifactId>feign</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cici.txdemo</groupId>
+            <artifactId>pojos</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>

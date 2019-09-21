@@ -1,6 +1,6 @@
 package com.cici.controller;
 
-import com.cici.api.v1.feign.account.OrderServerFeign;
+import com.cici.api.v1.feign.order.OrderServerFeign;
 import com.cici.entity.order.Order;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -30,4 +30,7 @@ public class Account extends DelFlagEntity {
     @TableField(value = "password")
     private String password;
 
+    @TableField(value = "pay_password")
+    private String payPassword;
+
 }

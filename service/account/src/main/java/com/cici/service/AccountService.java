@@ -12,4 +12,5 @@ public interface AccountService extends IService<Account> {
 
     Account createAccount(AccountCreateRequestBody body);
 
+    Account showMe(String username);
 }

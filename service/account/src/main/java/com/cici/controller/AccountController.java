@@ -5,17 +5,14 @@ import com.cici.entity.account.requestbody.AccountCreateRequestBody;
 import com.cici.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: Cici
  * @Date: 2019/9/17 14:35
  */
 @Controller
-@RequestMapping(value = "account")
+@RequestMapping(value = "accounts")
 public class AccountController {
 
     @Autowired
@@ -26,6 +23,10 @@ public class AccountController {
     public Account createAccount(@RequestBody AccountCreateRequestBody body){
         return accountService.createAccount(body);
     }
-
+    @RequestMapping(value = "/principal",method = RequestMethod.GET)
+    @ResponseBody
+    public Account showMe(@RequestParam(value = "username") String username){
+        return accountService.showMe(username);
+    }
 
 }

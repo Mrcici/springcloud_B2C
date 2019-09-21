@@ -1,7 +1,7 @@
-package com.cici.api.v1.feign.account.fallbackImpl;
+package com.cici.api.v1.feign.order.fallbackImpl;
 
-import com.cici.api.v1.feign.account.OrderServerFeign;
 import com.cici.api.v1.feign.config.RestServiceUnavailableException;
+import com.cici.api.v1.feign.order.OrderServerFeign;
 import com.cici.entity.order.Order;
 import org.springframework.stereotype.Component;
 

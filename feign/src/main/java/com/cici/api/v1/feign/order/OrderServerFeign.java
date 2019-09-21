@@ -1,6 +1,6 @@
-package com.cici.api.v1.feign.account;
+package com.cici.api.v1.feign.order;
 
-import com.cici.api.v1.feign.account.fallbackImpl.OrderServerCallback;
+import com.cici.api.v1.feign.order.fallbackImpl.OrderServerCallback;
 import com.cici.entity.order.Order;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;

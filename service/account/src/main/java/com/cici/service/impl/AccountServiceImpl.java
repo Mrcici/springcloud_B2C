@@ -1,5 +1,6 @@
 package com.cici.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cici.entity.account.Account;
 import com.cici.entity.account.requestbody.AccountCreateRequestBody;
@@ -32,6 +33,14 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> impl
                     "create error.");
         }
         return baseMapper.selectById(account.getId());
+    }
+
+    @Override
+    public Account showMe(String username) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("username",username);
+        Account account = baseMapper.selectOne(queryWrapper);
+        return account;
     }
 
 

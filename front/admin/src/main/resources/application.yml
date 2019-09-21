@@ -1,6 +1,8 @@
 server:
   port: 10005
 
+# 日志支持
+
 spring:
   application:
     name: admin-service
@@ -20,8 +22,8 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
     username: root
-#    password: root
-    password: 123456
+    password: root
+#    password: 123456
     # Number of ms to wait before throwing an exception if no connection is available.
     max-wait: 10000
     # Maximum number of active connections that can be allocated from this pool at the same time.
@@ -35,3 +37,10 @@ custom:
   security:
     jwtKey: 123
     resourceId: admin-service
+
+logging:
+  level:
+    org:
+      springframework:
+        security: INFO
+
