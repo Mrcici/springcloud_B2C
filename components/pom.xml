@@ -18,6 +18,7 @@
         <module>baseutil</module>
         <module>boot-security</module>
         <module>security-helper</module>
+        <module>code-generator</module>
     </modules>
 
 

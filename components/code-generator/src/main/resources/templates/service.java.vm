@@ -1,0 +1,25 @@
+package ${package.Service};
+import ${superServiceClassPackage};
+import /**在项目跟部ctrl+shift+R搜索这句话可以快速修改全局body包路径**/.*;
+import /****在项目跟部ctrl+shift+R搜索这句话可以快速修改全局entity路径**/.*;
+import java.util.List;
+
+/**
+ * <p>
+ * $!{table.comment} 服务类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
+     public ${entity} create(${entity}CreateRequestBody body);
+
+     public ${entity} update(Long id,${entity}UpdateRequestBody body);
+
+     public boolean delete(Long id);
+
+     public List<${entity}> select${entity}List();
+
+
+    }

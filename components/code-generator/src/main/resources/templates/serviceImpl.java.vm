@@ -1,0 +1,56 @@
+package ${package.ServiceImpl};
+import ${superServiceImplClassPackage};
+import ${package.Mapper}.${table.mapperName};
+import ${package.Service}.${table.serviceName};
+import org.springframework.stereotype.Service;
+import lombok.extern.slf4j.Slf4j;
+import /**在项目跟部ctrl+shift+R搜索这句话可以快速修改全局body包路径**/.*;
+import /****在项目跟部ctrl+shift+R搜索这句话可以快速修改全局entity路径**/.*;
+import java.util.List;
+
+
+
+
+
+/**
+ * <p>
+ * $!{table.comment} 服务实现类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Slf4j
+@Service
+public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> implements ${table.serviceName} {
+
+
+     @Override
+     public ${entity} create(${entity}CreateRequestBody body){
+
+             return null;
+
+
+     }
+
+     @Override
+     public  ${entity} update(Long id, ${entity}UpdateRequestBody body){
+
+
+             return null;
+     }
+
+     @Override
+     public List<${entity}> select${entity}List(){
+             return null;
+
+     }
+
+      @Override
+     public boolean delete(Long id){
+
+             return false;
+
+     }
+
+}

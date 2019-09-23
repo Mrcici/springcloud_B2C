@@ -5,8 +5,8 @@ import com.cici.entity.order.Order;
 import com.cici.entity.order.requestbody.OrderCreateRequestBody;
 import com.cici.exception.common.ExceptionEnumImpl;
 import com.cici.exception.common.RestPreconditionFailedException;
-import com.cici.mapper.TestMapper;
-import com.cici.service.TestService;
+import com.cici.mapper.OrderMapper;
+import com.cici.service.OrderService;
 import com.cici.tools.BeanUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ import java.math.BigDecimal;
  */
 @Service
 @Slf4j
-public class TestServiceImpl extends ServiceImpl<TestMapper,Order> implements TestService {
+public class OrderServiceImpl extends ServiceImpl<OrderMapper,Order> implements OrderService {
 
     @Override
     public Order createOrder() {

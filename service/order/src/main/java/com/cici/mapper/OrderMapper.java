@@ -7,5 +7,5 @@ import com.cici.entity.order.Order;
  * @author ：cici
  * @date ：Created in 2019/9/11 11:20
  */
-public interface TestMapper extends BaseMapper<Order> {
+public interface OrderMapper extends BaseMapper<Order> {
 }

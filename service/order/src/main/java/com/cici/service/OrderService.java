@@ -8,7 +8,7 @@ import com.cici.entity.order.requestbody.OrderCreateRequestBody;
  * @author ：cici
  * @date ：Created in 2019/9/10 11:40
  */
-public interface TestService extends IService<Order> {
+public interface OrderService extends IService<Order> {
 
     Order createOrder();
 

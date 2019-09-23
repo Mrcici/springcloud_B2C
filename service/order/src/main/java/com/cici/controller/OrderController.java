@@ -2,7 +2,7 @@ package com.cici.controller;
 
 import com.cici.entity.order.Order;
 import com.cici.entity.order.requestbody.OrderCreateRequestBody;
-import com.cici.service.TestService;
+import com.cici.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,21 +11,21 @@ import org.springframework.web.bind.annotation.*;
  * @date ：Created in 2019/9/10 11:35
  */
 @RestController
-@RequestMapping(value = "/test")
-public class TestController {
+@RequestMapping(value = "/order")
+public class OrderController {
 
     @Autowired
-    private TestService testService;
+    private OrderService orderService;
 
     @RequestMapping(value = "/create",method = RequestMethod.GET)
     @ResponseBody
     public Order createOrder(){
-        return testService.createOrder();
+        return orderService.createOrder();
     }
 
     @RequestMapping(value = "/create",method = RequestMethod.POST)
     @ResponseBody
     public Order testCreateOrder(@RequestBody OrderCreateRequestBody body){
-        return testService.testCreateOrder(body);
+        return orderService.testCreateOrder(body);
     }
 }

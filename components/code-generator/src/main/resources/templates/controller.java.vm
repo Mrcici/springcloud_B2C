@@ -1,0 +1,105 @@
+package ${package.Controller};
+
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import ${package.Service}.${table.serviceName};
+
+#if(${restControllerStyle})
+import org.springframework.web.bind.annotation.RestController;
+#else
+import org.springframework.stereotype.Controller;
+#end
+#if(${superControllerClassPackage})
+import ${superControllerClassPackage};
+#end
+
+
+
+import ${package.Mapper}.${table.mapperName};
+import ${package.Service}.${table.serviceName};
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
+import /**在项目跟部ctrl+shift+R搜索这句话可以快速修改全局body包路径**/.*;
+import /****在项目跟部ctrl+shift+R搜索这句话可以快速修改全局entity路径**/.*;
+import com.zwx.exception.ExceptionEnumImpl;
+import com.zwx.exception.common.RestNotFoundException;
+import com.zwx.boot.web.ApiPrefix;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.Optional;
+import static org.springframework.http.HttpStatus.OK;
+import com.zwx.exception.common.RestNotFoundException;
+import com.zwx.exception.ExceptionEnumImpl;
+
+
+
+import javax.validation.Valid;
+
+/**
+ * <p>
+ * ${entity} 前端控制器
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${restControllerStyle})
+@RestController
+#else
+@Controller
+#end
+@Slf4j
+@RequestMapping(path = ApiPrefix.V1 +"#if(${package.ModuleName})${package.ModuleName}s#end#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}s#else${table.entityPath}s#end")
+#if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass} {
+#else
+public class ${table.controllerName} {
+#end
+    @Autowired
+    private ${table.serviceName}  ${mentity}Service;
+
+
+    @ApiOperation(value = "创建$!{table.comment}", notes = "创建$!{table.comment}", httpMethod = "POST")
+    @RequestMapping(method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<${entity}> create${entity}(@RequestBody ${entity}CreateRequestBody body) {
+            return Optional.ofNullable(${mentity}Service.create(body))
+                    .map(s->new ResponseEntity<>(s,OK))
+                    .orElseThrow(()->new RestNotFoundException(ExceptionEnumImpl.REQUEST_BODY_IS_NULL,
+                    "Create ${entity} is fail ."));
+
+            }
+
+
+    @ApiOperation(value = "更新$!{table.comment}", notes = "更新$!{table.comment}", httpMethod = "PUT")
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<${entity}>  update${entity}(@PathVariable long id, @RequestBody ${entity}UpdateRequestBody body) {
+
+            return Optional.ofNullable(${mentity}Service.update(id, body))
+                    .map(s -> new ResponseEntity<>(s, OK))
+                    .orElseThrow(() -> new RestNotFoundException(ExceptionEnumImpl.REQUEST_BODY_IS_NULL,
+                    "update ${entity} is fail."));
+     }
+
+
+    @ApiOperation(value = "删除$!{table.comment}", notes = "删除$!{table.comment}", httpMethod = "DELETE")
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity deleteById(@PathVariable long id) {
+            return Optional.of(${mentity}Service.deleteById(id))
+                    .map(s -> new ResponseEntity<>(s, OK))
+                    .orElseThrow(() -> new RestNotFoundException(ExceptionEnumImpl.REQUEST_BODY_IS_NULL,
+                    "delete ${entity} is fail  ."));
+    }
+
+
+
+
+
+
+}
