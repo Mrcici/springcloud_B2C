@@ -32,4 +32,7 @@ public class PayOrder extends DelFlagEntity {
 
     @TableField(value = "order_id")
     private Long orderId;
+
+    @TableField(value = "result")
+    private String result = "FAIL";
 }

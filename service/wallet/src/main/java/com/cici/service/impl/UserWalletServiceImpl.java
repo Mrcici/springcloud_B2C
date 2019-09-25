@@ -30,4 +30,10 @@ public class UserWalletServiceImpl extends ServiceImpl<UserWalletMapper,UserWall
         }
         return baseMapper.selectById(userWallet.getId());
     }
+
+    @Override
+    public UserWallet selectByWalletId(Long id) {
+        UserWallet userWallet = baseMapper.selectById(id);
+        return userWallet;
+    }
 }

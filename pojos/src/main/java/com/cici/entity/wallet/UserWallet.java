@@ -28,6 +28,6 @@ public class UserWallet extends DelFlagEntity {
     private Long accountId;
 
     @TableField(value = "amount")
-    private Long amount;
+    private Integer amount;
 
 }

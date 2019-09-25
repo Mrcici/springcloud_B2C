@@ -25,4 +25,6 @@ public class OrderCreateRequestBody extends BaseBody {
     private BigDecimal totalMoney;
 
     private Integer num;
+
+    private String  state = "waitPay";
 }

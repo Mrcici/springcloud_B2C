@@ -13,4 +13,8 @@ public interface OrderService extends IService<Order> {
     Order createOrder();
 
     Order testCreateOrder(OrderCreateRequestBody order);
+
+    Order selectOrderById(Long id);
+
+    Integer updateOrder(Order order);
 }

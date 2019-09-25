@@ -12,4 +12,6 @@ public interface UserWalletService extends IService<UserWallet> {
 
     UserWallet createUserWallet(UserWalletCreateRequestBody body);
 
+    UserWallet selectByWalletId(Long id);
+
 }

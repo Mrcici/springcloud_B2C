@@ -3,4 +3,16 @@
 <mapper namespace="com.cici.mapper.UserWalletMapper">
 
 
+    <update id="updateBalance">
+     update user_wallet
+        set amount = amount - #{amount},
+          update_date = #{currentTime},
+          version = version + 1
+        where id = #{walletId}
+
+    </update>
+    <select id="excute">
+
+        select * from user_wallet where a= 3
+    </select>
 </mapper>

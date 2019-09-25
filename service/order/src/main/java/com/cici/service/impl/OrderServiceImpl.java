@@ -44,4 +44,14 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper,Order> implements 
         return baseMapper.selectById(order.getId());
     }
 
+    @Override
+    public Order selectOrderById(Long id) {
+        return baseMapper.selectById(id);
+    }
+
+    @Override
+    public Integer updateOrder(Order order) {
+        return baseMapper.updateById(order);
+    }
+
 }

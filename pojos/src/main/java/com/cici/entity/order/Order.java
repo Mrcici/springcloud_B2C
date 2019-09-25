@@ -38,4 +38,7 @@ public class Order extends DelFlagEntity {
 
     @TableField(value = "num")
     private Integer num;
+
+    @TableField(value = "state")
+    private String  state;
 }

@@ -12,4 +12,5 @@ public interface PayOrderService extends IService<PayOrder> {
 
     PayOrder payApi(PayOrderCreateRequestBody body);
 
+    PayOrder createPayOrder(PayOrder payOrder);
 }

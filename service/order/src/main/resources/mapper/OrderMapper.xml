@@ -3,4 +3,8 @@
 <mapper namespace="com.cici.mapper.OrderMapper">
 
 
+    <update id="updateOrderStatus">
+
+
+    </update>
 </mapper>
