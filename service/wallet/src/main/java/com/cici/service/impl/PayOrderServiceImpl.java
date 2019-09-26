@@ -53,8 +53,6 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         UserWallet old = userWalletService.selectByWalletId(body.getWalletId());
         PayOrder payOrder = new PayOrder();
         Integer current = old.getAmount() - body.getAmount();
-        try {
-
             if (current > 0) {
 
                 String keys = UUID.randomUUID().toString() + "$" + System.currentTimeMillis();
@@ -67,41 +65,30 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
                 params.put("current", current);
                 params.put("currentVersion", old.getVersion());
 
-                //	同步阻塞
-                CountDownLatch countDownLatch = new CountDownLatch(1);
-                params.put("currentCountDown", countDownLatch);
+                payOrder.setAmount(body.getAmount());
+                payOrder.setOrderId(body.getOrderId());
+                payOrder.setWalletId(body.getWalletId());
+                payOrder = this.createPayOrder(payOrder);
+
                 //	消息发送并且 本地的事务执行
                 TransactionSendResult sendResult = transactionProducer.sendMessage(message, params);
                 log.info("===========================================================================");
-                countDownLatch.await();
                 if(sendResult.getSendStatus() == SendStatus.SEND_OK
                         && sendResult.getLocalTransactionState() == LocalTransactionState.COMMIT_MESSAGE) {
-                    log.info("进入回调");
+                    log.info("进入SUCCESS回调");
                     //	回调order通知支付成功消息,可以调用其他服务，例如积分服务等
-
-                    QueryWrapper queryWrapper = new QueryWrapper();
-                    queryWrapper.eq("order_id",body.getOrderId());
-                    payOrder = baseMapper.selectOne(queryWrapper);
-                    payOrder.setResult("SUCCESS");
-                    baseMapper.updateById(payOrder);
                     paymentRet = "支付成功!";
+                    baseMapper.updateById(payOrder);
                     payOrder.setResult(paymentRet);
                 } else {
+                    log.info("进入FAIL回调");
                     paymentRet = "支付失败!";
-                    QueryWrapper queryWrapper = new QueryWrapper();
-                    queryWrapper.eq("order_id",body.getOrderId());
-                    payOrder = baseMapper.selectOne(queryWrapper);
                     payOrder.setResult(paymentRet);
                 }
             } else {
                 paymentRet = "余额不足!";
                 payOrder.setResult(paymentRet);
             }
-        }catch (Exception e){
-            e.printStackTrace();
-            paymentRet = "支付失败!";
-            payOrder.setResult(paymentRet);
-        }
         return payOrder;
     }
 

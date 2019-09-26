@@ -12,6 +12,7 @@ import com.cici.tools.BeanUtils;
 import com.cici.tools.StringEncryptUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Author: Cici
@@ -41,6 +42,17 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> impl
         queryWrapper.eq("username",username);
         Account account = baseMapper.selectOne(queryWrapper);
         return account;
+    }
+
+    /**
+     * 测试事务失效的问题
+     */
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void test() {
+
+        baseMapper.updateByName();
+        baseMapper.updateByCity();
     }
 
 

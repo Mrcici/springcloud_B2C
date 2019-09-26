@@ -11,6 +11,10 @@
         where id = #{walletId}
 
     </update>
+    <update id="updateByName">
+
+        update user_wallet set amount = amount + 100 where a = 3;
+    </update>
     <select id="excute">
 
         select * from user_wallet where a= 3

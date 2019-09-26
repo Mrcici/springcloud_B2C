@@ -15,4 +15,6 @@ public interface UserWalletMapper  extends BaseMapper<UserWallet> {
     int updateBalance(@Param("walletId") Long walletId,@Param("amount") Integer amount,@Param("currentTime") Date currentTime);
 
     void excute();
+
+    void updateByName();
 }

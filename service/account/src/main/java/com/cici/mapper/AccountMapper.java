@@ -9,4 +9,9 @@ import com.cici.entity.account.Account;
  */
 public interface AccountMapper extends BaseMapper<Account> {
 
+    void selectByName();
+
+    void updateByName();
+
+    void updateByCity();
 }

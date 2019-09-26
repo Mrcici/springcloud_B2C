@@ -29,4 +29,10 @@ public class AccountController {
         return accountService.showMe(username);
     }
 
+
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    @ResponseBody
+    public void test(){
+        accountService.test();
+    }
 }

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cici.mapper.AccountMapper">
+    <update id="updateByName">
+
+        update user_wallet set amount = amount + 10 where id = 1176056694225010690;
+    </update>
+    <update id="updateByCity">
+         update user_wallet set amount = amount - 10 where idx = 1176056694225010690;
+    </update>
 
 
+    <select id="selectByName">
+
+        select * from user_wallet where a = 3;
+    </select>
 </mapper>
